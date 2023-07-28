@@ -1,5 +1,8 @@
 import style from './Footer.module.css';
-import { ReactComponent as VKIcon } from '../../img/vk.svg'
+import { ReactComponent as VKIcon } from '../../img/vk.svg';
+import { ReactComponent as TGIcon } from '../../img/tg.svg';
+import { ReactComponent as PinterestIcon } from '../../img/pinterest.svg';
+import { ReactComponent as StumbleuponIcon } from '../../img/stumbleupon.svg';
 
 import Container from '../Container/Container';
 
@@ -16,25 +19,25 @@ const Footer = () => (
 				<ul className={style.social}>
 					<li className={style.item}>
 						<a className={style.link} href='https://vk.com/id460284285'>
-							<VKIcon/>
+							<VKIcon />
 						</a>
 					</li>
 
 					<li className={style.item}>
 						<a className={style.link} href='https://t.me/VasilievDevelop'>
-
+							<TGIcon/>
 						</a>
 					</li>
 
 					<li className={style.item}>
 						<a className={style.link} href='https://www.pinterest.com/'>
-
+							<PinterestIcon />
 						</a>
 					</li>
 
 					<li className={style.item}>
 						<a className={style.link} href='https://www.stumb.com/'>
-
+							<StumbleuponIcon />
 						</a>
 					</li>
 				</ul>
