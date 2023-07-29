@@ -25,6 +25,9 @@
 	border-radius: 30px;
 	border: none;
 }
+.button:disabled {
+	background-color: #a7c7be;
+}
 @media (max-width: 1024px) {
 	.buttons {
 		gap: 20px;
