@@ -2,13 +2,14 @@ import style from './Header.module.css';
 
 import Container from "../Container/Container";
 import Choices from './Choices/Choices';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { fetchText } from '../../store/textSlice';
+import { fetchImage } from '../../store/imgSlice';
+import { useParams } from 'react-router-dom';
 
 const Header = () => {
 	const dispath = useDispatch();
-	const {holliday} = useSelector(state => state.hollidays);
-	
+	const {holliday} = useParams();
 
 	return (
 		<header className={style.header}>
@@ -26,7 +27,13 @@ const Header = () => {
 							>
 							Поменять поздравление</button>
 
-						<button className={style.button}>Поменять фон</button>
+						<button 
+							className={style.button}
+							disabled={!holliday}
+							onClick={() => {
+								dispath(fetchImage(holliday))
+							}}
+						>Поменять фон</button>
 					</div>
 
 					<Choices/>
